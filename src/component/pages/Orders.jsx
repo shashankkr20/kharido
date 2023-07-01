@@ -30,7 +30,7 @@ const Orders = () => {
                     <div>
                     <span style={{fontSize:"30px",fontWeight:500}}>{res.title}</span>
                     <span style={{fontSize:"20px",fontWeight:600}}>Rs. {res.price}</span>
-                    <span>Delivery charge:{res.price<500?'Rs 0':'Rs 40'}</span>
+                    <span>Delivery charge:{res.price<500?'Rs 40':'Rs 0'}</span>
                     <span>Total items:{res.quant}</span>
                     </div>
             </div>

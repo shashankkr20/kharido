@@ -86,7 +86,7 @@ const Login = () => {
                 <div onClick={()=>{setlogsgn('sign');setuName('');setuPass('')}} style={{backgroundColor:logsgn==='sign'?'#FFF':'rgb(88, 199, 227)'}}>Signup</div>
             </div>
             {logsgn==="login" && <div className="detailsLogin signininput" >
-               <input value={uname} onChange={(e)=>setuName(e.target.value)}  type="text" placeholder='Enter Your email/Phoneno' required/>
+               <input value={uname} onChange={(e)=>setuName(e.target.value)}  type="text" placeholder='Enter Your Phoneno' required/>
                <input value={upass} onChange={(e)=>setuPass(e.target.value)}  type="password" placeholder='Enter Your Password' required/>
                <label  style={{color:"#ffff",cursor:"pointer"}}>forgot password?</label>
                <button onClick={clickHandle} value='signinbtn'>Submit</button>

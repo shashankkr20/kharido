@@ -2,7 +2,7 @@ import React, {  useState } from 'react'
 import './payment.css'
 import VerifiedIcon from '@mui/icons-material/Verified';
 import Header from '../Home/Header'
-import { useLocation } from 'react-router-dom';
+import { useLocation,useNavigate } from 'react-router-dom';
 import  Axios  from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { adduser,otpShow } from '../../Redux/Action/action';
@@ -13,6 +13,7 @@ const Payment = () => {
     const [success,setsuccess]= useState(false);
     const [otpshow,setotpshow]=useState(false)
     const loc=useLocation();
+    const navigate=useNavigate()
     const totprice=loc.state.data;
     const dispatch=useDispatch()
     const curuser=useSelector(state=>state.curuser)
@@ -84,7 +85,7 @@ const Payment = () => {
             <span style={{cursor:'pointer'}} onClick={ordersuccess}>Submit</span></div>}
             {success && <div style={{display:'flex',flexDirection:'column',gap:8}}>
                 <span style={{marginBottom:'15px',height:'max-content',display:'flex',flexWrap:'wrap',alignItems:'center',fontWeight:600,fontSize:30,padding:10}}>Your order is successful with order id: <b>12345678</b><VerifiedIcon/></span>
-                <div><a href='/home' style={{marginRight:10,color:'#FFF',backgroundColor:"goldenrod",padding:10}}>GO TO HOME</a><a href='/home' style={{color:'#FFF',backgroundColor:"goldenrod",padding:10}}>GO TO ORDERS</a></div>
+                <div><span onClick={()=>navigate('/home')}  style={{cursor:'pointer',marginRight:10,color:'#FFF',backgroundColor:"goldenrod",padding:10}}>GO TO HOME</span><span onClick={()=>navigate('/orders')}  style={{cursor:'pointer',color:'#FFF',backgroundColor:"goldenrod",padding:10}}>GO TO ORDERS</span></div>
             </div>}
          </div>}
          
