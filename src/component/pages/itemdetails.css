@@ -1,0 +1,351 @@
+.Itemdetails{
+    width: 99vw;
+    padding: 10px;
+    height:max-content ;
+    display: flex;
+    gap: 10px;
+}
+.itemdet1{
+    flex: 0.45;
+    padding: 10px;
+}
+.sim-pro{
+display: flex;
+flex-direction: column;
+    margin-top: 30px;
+    gap: 10px;
+    padding: 8px;
+}
+.sim-itemset{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.imageprod{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    padding: 8px;
+    /* position: sticky; */
+    /* left: 0; */
+    /* top: 0; */
+    height: calc(100vh - 120px);
+    border-bottom: 1px solid grey;
+    
+    /* border-right: 2px solid grey; */
+}
+.imageprod>img{
+    /* align-self: center; */
+    /* display: block; */
+    max-width: 99%;
+    max-height: auto;
+}
+.detailsprod{
+    border-left: 2px solid grey;
+    padding: 10px;
+    /* overflow-y: scroll; */
+    flex:0.53;
+    /* border: 2px solid black; */
+}
+.detailsprod>.parta{
+    padding-bottom: 30px;
+    padding: 6px;
+    border-bottom: 2px solid grey;
+    /* padding-bottom: 20px; */
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.brandname{
+    font-size: 1.6em;
+    font-weight: 600;
+}
+.Prodtitle{
+    font-size: 1.3em;
+    font-weight: 450;
+}
+.rats{
+    padding: 5PX;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #ede7e7;
+    display: flex;
+    justify-content: space-evenly;
+}
+.rats>span{
+    /* height:90%; */
+    padding: 3px;
+}
+.detailsprod>.partb{
+    padding-bottom: 20px;
+    padding: 6px;
+    border-bottom: 2px solid grey;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.pricedet-i{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 6px;
+}
+.disprice-i{
+    font-weight: 600;
+}
+.actprice-i{
+    font-weight: 500;
+    text-decoration: line-through;
+    color: grey;
+}
+.dis-i{
+    font-weight: 480;
+    color: rgb(243, 155, 47);
+}
+.incl{
+    color: green;
+    font-weight: 500;
+}
+.selsiz{
+    font-weight: 600;
+
+}
+.size-opt{
+    gap: 20px;
+    display: flex;
+}
+.size-opt>span{
+    cursor: pointer;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-wish{
+display: flex;
+gap: 20px;
+
+}
+.cart-add{
+    cursor: pointer;
+    color: #fff;
+    width:200px;
+    background-color: #ff3e6c;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* display: flex; */
+}
+
+.wishl{
+    cursor: pointer;
+    width: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border: 1px solid black;
+
+}
+.detailsprod>.partc{
+    padding-bottom: 20px;
+    padding: 6px;
+    border-bottom: 2px solid grey;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.pin-check{
+    border-radius: 10px;
+    border: 1px solid black;
+    align-items: center;
+    display: flex;
+ width: 200px;
+ height: 40px;
+}
+.pin-check>input{
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    /* flex: 0.5; */
+    border: none;
+}
+.pin-check>input:focus{
+    outline: none;
+}
+.detailsprod>.partd{
+    padding-bottom: 20px;
+    padding: 6px;
+    border-bottom: 2px solid grey;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.detailsprod>.parte{
+    padding-bottom: 20px;
+    padding: 6px;
+    border-bottom: 2px solid grey;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.speci{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+}
+.speci>div{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    flex: 0.5;
+    border-bottom: 1px solid grey;
+}
+.detailsprod>.partf{
+    padding: 6px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid grey;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.ratfig{
+    display: flex;
+    gap: 20px;
+}
+.ratfig>div{
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    flex: 0.5;
+}
+.ratperall>span{
+    align-items: center;
+    gap: 6px;
+    display: flex;
+    
+}
+.ratperall>span>.divper{
+    width: 100px;
+    background-color: #dfdddd;
+    height: 8px;
+    border-radius: 10px;
+}
+.ratperall>span>.divper>.divper-c{
+    width: 50%;
+    border-radius: 10px;
+    height: 100%;
+    background-color: green;
+    
+}
+.custsaid{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.custsaid>div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* align-items: center; */
+}
+.custsaid>div>.divper{
+    width: 100px;
+    background-color: #dfdddd;
+    height: 8px;
+    border-radius: 10px;
+}
+.custsaid>div>.divper>.divper-c{
+    width: 50%;
+    border-radius: 10px;
+    height: 100%;
+    background-color: green;
+    
+}
+.detailsprod>.partg{
+    padding: 6px;
+    border-bottom: 2px solid grey;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 20px;
+}
+.custrevs{
+    padding-top: 10px;
+    gap: 6px;
+    display: flex;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+    /* align-items: flex-start; */
+}
+.cust-oth>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex-direction: column; */
+}
+/* .custlikes>span{
+    display: flex;
+    align-items: center;
+}
+.custdislikes>span{
+    display: flex;
+    align-items: center;
+} */
+.custrevs>.custrets{
+    /* justify-content: center; */
+    display: flex;
+    flex: 0.05;
+    padding: 2px;
+    /* border: 1px solid green; */
+    margin-top: 20px;
+}
+.custrevs>.custrets>span{
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: 500;
+    padding: 6px;
+    background-color: green;
+    
+    color: #fff;
+    width: 40px;
+    height: max-content;
+}
+.custrevs>.cust-oth{
+    flex: 0.95;
+}
+.detailsprod>.parth{
+    padding: 6px;
+    /* border-bottom: 2px solid grey; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+@media only screen and (max-width:800px) {
+    .Itemdetails{
+        flex-direction: column;
+        padding: 0;
+    }
+    .detailsprod{
+        border-left: none;
+    }
+}
+@media only screen and (max-width:600px) {
+    .sim-itemset{
+        align-self: center;
+        width: 280px;
+    }
+}

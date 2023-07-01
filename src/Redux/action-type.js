@@ -1,0 +1,6 @@
+export const acttype={
+    ADD_CURRUSER:"ADD_CURRUSER",
+    ADD_PROD:"ADD_PROD",
+    RESET_DATA:"RESET_DATA",
+    OTP_SHOW:"OTP_SHOW"
+}

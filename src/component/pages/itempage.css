@@ -1,0 +1,117 @@
+.itempage{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.itempage>span{
+    border-bottom: 2px solid pink;
+ margin-left: 10px;
+ font-size: xx-large;
+}
+.itemset{
+    /* align-self: center; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    max-width: 99%;
+    width: fit-content;
+    /* gap: 27px; */
+    height: max-content;
+    /* border: 2px solid black; */
+    padding: 5px;
+}
+.item{
+    cursor: pointer;
+    margin: 6px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    /* padding: 3px; */
+    height: 380px; 
+    width:250px ;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid grey; */
+}
+.item>.itemimage{
+    /* display: flex;
+    justify-content: center; */
+    position: relative;
+    /* border-bottom: 1px solid grey; */
+
+}
+.itemimage>img{
+    
+    width: 250px;
+    height:310px;
+}
+.item-det{
+    display: flex;
+    flex-direction: column;
+    /* background-color: #e7cdea; */
+}
+.itemimage>.rating-det{
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+}
+.rating-det{
+    border-radius: 5px;
+    font-size: small;
+    font-weight: 600;
+    padding: 3px;
+    width: 50%;
+    background-color: #fdfbf8;
+    border: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.rating-det>.star-val{
+    /* padding: 3px; */
+    padding-right: 5px;
+    display: flex;
+    border-right: 2px solid black;
+    align-items: center;
+    
+}
+.rating-det>.star-val>.star-ic{
+    color: green;
+    margin-left: 2px;
+    font-size: 1rem;
+}
+.item-det>.brand-name
+{
+    font-weight: 700;
+}
+.item-det>.item-title
+{
+    font-weight: 500;
+    color: rgb(107, 106, 106);
+}
+.item-det>.priceall{
+    display: flex;
+    /* justify-content: space-between; */
+}
+.item-det>.priceall>.actprice{
+    font-weight: 500;
+    margin-right: 7px;
+}
+.item-det>.priceall>.disprice{
+    /* font-weight: 500; */
+    color: grey;
+    font-size: smaller;
+    margin-top: 2px;
+    text-decoration: line-through;
+    margin-right: 7px;
+}
+.item-det>.priceall>.dis{
+    font-size: smaller;
+    margin-top: 2px;
+    color: rgb(95, 70, 8);
+    /* margin-right: 7px; */
+}
+@media only screen and (max-width:600px) {
+    .itemset{
+        align-self: center;
+        width: 280px;
+    }
+}

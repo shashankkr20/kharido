@@ -1,0 +1,40 @@
+.mainbar
+{
+    /* background-color: green; */
+    /* min-height: calc(96.8vh - 80px); */
+    height: max-content;
+    padding: 10px;
+}
+.categories{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.categories img{
+    cursor: pointer;
+}
+.categories>.cloth-cat{
+    display: flex;
+    justify-content: center;
+}
+.categories>.cloth-cat>img{
+    width: 95vw;
+}
+.categories>.miscat{
+    display: flex;
+    gap: 4px;
+}
+.categories>.miscat>img{
+    max-width: 32.4vw;
+}
+@media only screen and (max-width:600px) {
+    .categories>.miscat{
+        display: flex;
+        flex-direction: column;
+
+        gap: 4px;
+    }
+    .categories>.miscat>img{
+    max-width: 99vw;
+}
+}
