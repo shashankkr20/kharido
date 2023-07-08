@@ -14,10 +14,13 @@ const Itempage = () => {
     
      const fo = await item.find((item) => item['_id'] === e.currentTarget.id);
      await console.log(fo)
-    navigate('/load',{state:{
-      location:'/itemdet',
-      data:fo
-  }})
+  //   navigate('/load',{state:{
+  //     location:'/itemdet',
+  //     data:fo
+  // }})
+  navigate('/itemdet',{state:{
+    data:fo
+}})
     
   }
   return (

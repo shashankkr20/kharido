@@ -4,7 +4,8 @@
     flex-direction: column;
     gap: 16px;
     padding: 20px;
-    background-image: linear-gradient(to right,pink,rgb(240, 218, 52));
+    /* background-color: lightgray; */
+    /* background-image: linear-gradient(to right,pink,rgb(240, 218, 52)); */
 }
 .checkout>.addresses{
     padding-bottom: 20px;
@@ -19,7 +20,7 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     width: 80%;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #ffff;
     padding: 40px;
     display: flex;
     gap: 10px;

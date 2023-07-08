@@ -37,8 +37,8 @@ const Checkout = () => {
     <>
     <Header/>
     <div className='checkout'>
-        <span style={{cursor:'pointer',color:'green',fontSize:"50px",fontWeight:600,textAlign:"center",marginBottom:"40px",textDecoration:"underline"}}>Your Addresses</span>
-        <div style={{cursor:'pointer',color:'red',fontWeight:600,display:'flex',padding:'20px',backgroundColor:'#f1f1f1',width:'200px',borderRadius:'10px',boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px'}}><AddIcon/> Add New Address</div>
+        {/* <span style={{cursor:'pointer',color:'green',fontSize:"50px",fontWeight:600,textAlign:"center",marginBottom:"40px",textDecoration:"underline"}}>Your Addresses</span> */}
+        <div style={{cursor:'pointer',color:'red',fontWeight:600,display:'flex',padding:'20px',backgroundColor:'#ffff',width:'200px',borderRadius:'10px',boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px'}}><AddIcon/> Add New Address</div>
         <span style={{color:'brown',fontSize:'larger',fontWeight:600}}>Select an address</span>
         <div className="addresses">
             <div className="address">
