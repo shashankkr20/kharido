@@ -19,9 +19,9 @@ function App() {
   return (
   <>
    
-   <BrowserRouter basename="https://kharido.onrender.com/">
+   <BrowserRouter>
    <Routes>
-    <Route path='https://kharido.onrender.com/' element={<Login/>}></Route>
+    <Route path='/' element={<Login/>}></Route>
     <Route path='/itemdet' element={<Itemdetails/>}></Route>
     <Route path='/head' element={<Header/>}></Route>
     <Route path='/home' element={<Mainbar/>}></Route>
