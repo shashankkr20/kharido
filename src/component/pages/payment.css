@@ -15,7 +15,7 @@
     flex-direction: column;
     gap: 10px;
     padding: 30px;
-    background-color: transparent;
+    background-color: grey;
 }
 .payopt input{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
