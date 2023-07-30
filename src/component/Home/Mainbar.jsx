@@ -39,12 +39,12 @@ const Mainbar = () => {
         </div> */}
         <div className="categories">
           <div className="cloth-cat">
-             <img id='Clothes' onClick={handleItemsearch} src="./images/cloth.webp" alt="" />
+            <div> <img id='Clothes' onClick={handleItemsearch} src="./images/cloth.jpg" alt="" /><span>Clothes</span></div>
           </div>
           <div className="miscat">
-            <img onClick={handleItemsearch} id='Electronics' src="./images/gadgets.webp" alt="" />
-            <img onClick={handleItemsearch} id='Medicine' src="./images/Medicine.jpg" alt="" />
-            <img onClick={handleItemsearch} id='Beauty' src="./images/beauty.jpeg" alt="" />
+            <div><img onClick={handleItemsearch} id='Electronics' src="./images/gadgets.webp" alt="" /><span>Electronics</span></div>
+            <div><img onClick={handleItemsearch} id='Medicine' src="./images/Medicine.jpg" alt="" /><span>Medicine</span></div>
+            <div><img onClick={handleItemsearch} id='Beauty' src="./images/beauty.jpeg" alt="" /><span>Beauty</span></div>
           </div>
         </div>
     </div>

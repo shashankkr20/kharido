@@ -32,6 +32,7 @@ const Login = () => {
         if(emailpattern.test(email) && passpattern.test(pass) && phonePattern.test(phoneno))
         {
           clearall();
+          // console.log(api);
             await Axios.post(`${api}/adduser`, {
             name:name,
             phoneno:phoneno,
