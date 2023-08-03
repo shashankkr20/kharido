@@ -19,7 +19,7 @@ function App() {
   return (
   <>
    
-   <BrowserRouter>
+   <BrowserRouter basename='https://successful-onesies-goat.cyclic.app'>
    <Routes>
     <Route path='/' element={<Login/>}></Route>
     <Route path='/itemdet' element={<Itemdetails/>}></Route>
