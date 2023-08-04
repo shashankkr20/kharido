@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Routes,Route, BrowserRouter } from 'react-router-dom';
+import { Routes,Route, BrowserRouter,Navigate } from 'react-router-dom';
 import Chatbot from './component/Home/Chatbot';
 import Header from './component/Home/Header';
 // import Home from './component/Home/Home';
@@ -21,6 +21,7 @@ function App() {
    
    <BrowserRouter>
    <Routes>
+    <Route path='*' element={<Navigate to='/' />}></Route>
     <Route path='/' element={<Login/>}></Route>
     <Route path='/itemdet' element={<Itemdetails/>}></Route>
     <Route path='/head' element={<Header/>}></Route>
