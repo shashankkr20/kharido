@@ -27,13 +27,13 @@ const Itempage = () => {
     <>
     <Header/>
     <div className='itempage'>
-      <span className='item-head'>{searchtitle}</span>
+      <span className='item-head' >{searchtitle}</span>
       <div className="itemset">
         {
           item.map((ele)=>{
             return(
                 <div className="item" id={ele._id} onClick={handleItemshow}>
-              <div className="itemimage"><img src={`./images/${ele.image}`} alt="" /><div className='rating-det'><span className='star-val'>2.6<StarIcon className='star-ic'/></span>  <span>2.1k</span></div></div>
+              <div className="itemimage"><div className='imgholder'><img src={`./images/${ele.image}`} alt="" /></div><div className='rating-det'><span className='star-val'>2.6<StarIcon className='star-ic'/></span>  <span>2.1k</span></div></div>
               <div className="item-det">
                 <span className='brand-name'>{ele.brname}</span>
                 <span className='item-title'>{ele.title}</span>

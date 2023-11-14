@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Routes,Route, BrowserRouter } from 'react-router-dom';
+import { Routes,Route, BrowserRouter,Navigate,HashRouter } from 'react-router-dom';
 import Chatbot from './component/Home/Chatbot';
 import Header from './component/Home/Header';
 // import Home from './component/Home/Home';
@@ -16,11 +16,13 @@ import Wishlist from './component/pages/Wishlist';
 import Otp from './component/pages/Otp';
 import Orders from './component/pages/Orders';
 function App() { 
+  const api=process.env.REACT_APP_API_KEY;
   return (
   <>
    
-   <BrowserRouter>
+   <HashRouter>
    <Routes>
+    <Route path='*' element={<Navigate to='/' />}></Route>
     <Route path='/' element={<Login/>}></Route>
     <Route path='/itemdet' element={<Itemdetails/>}></Route>
     <Route path='/head' element={<Header/>}></Route>
@@ -33,7 +35,7 @@ function App() {
     <Route path='wishlist' element={<Wishlist/>}></Route>
     <Route path='/orders' element={<Orders/>}></Route>
    </Routes>
-   </BrowserRouter>
+   </HashRouter>
    {/* <Header/> */}
    <Otp/>
    <Chatbot/>

@@ -21,6 +21,7 @@ const Itemdetails = () => {
   const dispatch=useDispatch()
   const item=loc.state.data;
   const curruser= useSelector(state=>state.curuser);
+//  console.log(item)
   const items=useSelector(state=>state.curprod)
   const handleItemshow=async(e)=>{
     
@@ -97,8 +98,8 @@ const handleWish=(e)=>{
             <div className="partb">
                 <div className='pricedet-i'><span className='disprice-i'>Rs. {item.actprice}</span><span className='actprice-i'>Rs. {item.disprice}</span><span className='dis-i'>({Math.floor(((item.actprice-item.disprice)/item.actprice)*100)}%)</span></div>
                 <span className='incl'>inclusive of all taxes</span>
-                <span className='selsiz'>SELECT SIZE</span>
-                <div className='size-opt'><span>28</span><span>30</span><span>32</span></div>
+                {item.category==='Clothes'?(<span className='selsiz'>SELECT SIZE</span>):""}
+                {item.category==='Clothes'?<div className='size-opt'><span>28</span><span>30</span><span>32</span></div>:""}
                 <div className='cart-wish'><div className="cart-add" onClick={handlebag}><ShoppingBagIcon style={{color:"#fff",marginRight:3}}/>ADD TO CART</div><div className="wishl" onClick={handleWish}><FavoriteIcon style={{marginRight:3,color:(curruser.wishlist).includes(item._id)?'red':'black'}}/>WISHLIST</div></div>
             </div>
             <div className="partc">
@@ -161,7 +162,7 @@ const handleWish=(e)=>{
             </div>
             <div className="partg">
               <span style={{fontWeight:600}}>Customer Photos (210)</span>
-              <div style={{display:"flex",gap:"10px",padding:"10px"}}><img src="./images/deal1.jpg" style={{width:"60px",height:"70px"}}/><img src="./images/deal1.jpg" style={{width:"60px",height:"70px"}}/><img src="./images/deal1.jpg" style={{width:"60px",height:"70px"}}/><img src="./images/deal1.jpg" style={{width:"60px",height:"70px"}}/></div>
+              <div style={{display:"flex",gap:"10px",padding:"10px"}}><img src={`./images/${item.image}`} style={{width:"60px",height:"70px"}}/><img src={`./images/${item.image}`} style={{width:"60px",height:"70px"}}/><img src={`./images/${item.image}`} style={{width:"60px",height:"70px"}}/><img src={`./images/${item.image}`} style={{width:"60px",height:"70px"}}/></div>
               <span style={{fontWeight:600}}>Customer Reviews (2110)</span>
               <div className='custrevs'>
                 <div className='custrets'><span>5 <StarIcon/></span></div>
@@ -190,7 +191,7 @@ const handleWish=(e)=>{
               items.map((ele)=>{
                 return(
                   <div className="item" id={ele._id} onClick={handleItemshow}>
-                  <div className="itemimage"><img src={`./images/${ele.image}`} alt="" /><div className='rating-det'><span className='star-val'>2.6<StarIcon className='star-ic'/></span>  <span>2.1k</span></div></div>
+                  <div className="itemimage"><div className='imgholder'><img src={`./images/${ele.image}`} alt="" /></div><div className='rating-det'><span className='star-val'>2.6<StarIcon className='star-ic'/></span>  <span>2.1k</span></div></div>
                   <div className="item-det">
                     <span className='brand-name'>{ele.brname}</span>
                     <span className='item-title'>{ele.title}</span>
