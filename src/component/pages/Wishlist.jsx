@@ -45,7 +45,7 @@ const Wishlist = () => {
               console.log(ele[0])
             return(
             <div className="item-c" id={ele[0]._id}>
-                    <img src={`./images/deal1.jpg`} alt="" />
+                    <img src={`./images/${ele[0].image}`} alt="" />
                     <div style={{gap:20,display:'flex',flexDirection:'column'}}>
                     <span style={{fontSize:"30px",fontWeight:500}}>{ele[0].brname}</span>
                     <span style={{fontSize:"17px",fontWeight:450}}>{ele[0].title}</span>
