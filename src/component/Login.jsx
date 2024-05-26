@@ -51,9 +51,9 @@ const Login = () => {
       else{
         if(phonePattern.test(uname) && passpattern.test(upass))
         {
-              await Axios.get(`${api}/authuser/${uname}/${upass}`, {
+              try{await Axios.get(`${api}/authuser/${uname}/${upass}`, {
               }).then(async(res)=>{
-                console.log(res.data)
+                // console.log(res.data)
                   if(res.data!=='not')
                   {
                     alert("welcome "+res.data.name)
@@ -68,7 +68,9 @@ const Login = () => {
                 }
                 }
                   
-                )
+                )}catch(error){
+                  alert(error)
+                }
             }
           
           else{
