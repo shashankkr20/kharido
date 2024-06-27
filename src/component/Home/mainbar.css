@@ -1,7 +1,6 @@
 .mainbar
 {
-    /* background-color: green; */
-    /* min-height: calc(96.8vh - 80px); */
+    
     height: max-content;
     padding: 10px;
 }
@@ -48,6 +47,26 @@
     color: black;
     text-align: center;
 }
+.sections{
+    margin-bottom: 4px;
+    border-top: 2px solid rgba(54, 53, 53, 0.712);
+    border-bottom: 2px solid rgba(54, 53, 53, 0.712);
+    display: none;
+    
+    padding: 4px;
+}
+.sections>span{
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 3px;
+    font-size: large;
+    font-weight: 500;
+    color: rgb(120, 18, 129);
+}
+.sections>span:hover{
+    color: rgb(48, 2, 34);
+    background-color: #edd8e3;
+}
 @media only screen and (max-width:600px) {
     .categories>.miscat{
         display: flex;
@@ -57,6 +76,10 @@
     }
     .categories>.miscat>div>img{
     max-width: 99vw;
+}
+.sections{
+    display: flex;
+    justify-content: space-between;
 }
 }
 

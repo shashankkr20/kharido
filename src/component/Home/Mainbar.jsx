@@ -21,6 +21,19 @@ const Mainbar = () => {
    data:fo
 }})
   }
+  const handleItemSearch=async(e)=>{
+    // alert(e.target.id)
+    await Axios.get(`${api}/searchItem/${e.target.innerText}`, {
+            
+    }).then(async(res)=>{
+      console.log(res.data)
+      // await localStorage.setItem('prod', JSON.stringify(res.data));
+      await dispatch(addprod(res.data))
+      navigate('/itempage',{state:{
+        data:e.target.innerHTML,
+    }})
+    })
+  }
   useEffect(() => {
     // Using fetch API
     fetch(`${api}/discounted-prods`)
@@ -38,6 +51,7 @@ const Mainbar = () => {
     <>
     <Header/>
     <div className='mainbar'>
+      <div className="sections"><span onClick={handleItemSearch}>Clothes</span> <span onClick={handleItemSearch}>Electronics</span> <span onClick={handleItemSearch}>Beauty</span> <span onClick={handleItemSearch}>Medicine</span></div>
        <img src="./images/flat.webp" alt="" style={{width:'100%'}} />
        <span style={{fontSize:'x-large',fontWeight:500,color:'rgb(13, 108, 108)',textDecoration:'underline',textAlign:'center',display:'block'}}>Discounted Products</span>
        <div className="itemset">
