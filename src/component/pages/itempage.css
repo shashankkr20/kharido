@@ -16,8 +16,7 @@
     
     flex-wrap: wrap;
     margin-top: 10px;
-    max-width: 99%;
-    width: fit-content;
+    width: 100%;
     /* gap: 27px; */
     height: max-content;
     /* border: 2px solid black; */
@@ -128,7 +127,10 @@
 @media only screen and (max-width:600px) {
     .itemset{
         align-self: center;
-        width: 280px;
+        /* width: 280px; */
+        /* align-items: center; */
+        justify-content: center;
+        padding: 0;
     }
     .itempage>span{
         border-bottom: 0px;
