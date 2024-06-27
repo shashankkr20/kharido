@@ -63,10 +63,6 @@
     font-weight: 500;
     color: rgb(120, 18, 129);
 }
-.sections>span:hover{
-    color: rgb(48, 2, 34);
-    background-color: #edd8e3;
-}
 @media only screen and (max-width:600px) {
     .categories>.miscat{
         display: flex;
