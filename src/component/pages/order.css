@@ -1,0 +1,8 @@
+.orderpage{
+    min-height: calc(100vh - 108px);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px;
+    /* background-image: linear-gradient(to right,pink,rgb(240, 218, 52)); */
+}
