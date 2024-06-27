@@ -23,6 +23,7 @@ function App() {
    <HashRouter>
    <Routes>
     <Route path='*' element={<Navigate to='/' />}></Route>
+    <Route path='/login' element={<Login/>}></Route>
     <Route path='/' element={<Mainbar/>}></Route>
     <Route path='/itemdet' element={<Itemdetails/>}></Route>
     <Route path='/head' element={<Header/>}></Route>

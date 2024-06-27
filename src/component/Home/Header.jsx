@@ -22,6 +22,10 @@ const Header = () => {
     await dispatch(resetData())
     navigate('/')
   }
+  const logIn=async()=>{
+    // await dispatch(resetData())
+    navigate('/login')
+  }
   const handleMouseOut=()=>{
     setIsShown(false)
   }
@@ -61,7 +65,7 @@ const Header = () => {
           <span className='otdet'>Saved Cards</span>
           
         </div>
-        <button style={{cursor:'pointer'}} onClick={logOut}>{(curruser._id==="" || curruser._id===undefined)? "Login":"Logout"}</button>
+        <button style={{cursor:'pointer'}} onClick={(curruser._id==="" || curruser._id===undefined)?logIn:logOut}>{(curruser._id==="" || curruser._id===undefined)? "Login":"Logout"}</button>
        </div> }</div><div className="acc_icon"><FavoriteBorderIcon onClick={()=>(curruser._id==="" || curruser._id===undefined)?alert("You need to Login to see your Wishlist"):navigate('/wishlist')}/><label className='labeling'>Favourite</label></div><div className="acc_icon carti"><ShoppingCartIcon onClick={()=>(curruser._id==="" || curruser._id===undefined)?alert("You need to Login to browse your cart"):navigate('/cart')}/><label className='labeling'>Cart</label><div className="card_ct"><label>{cartcnt}</label></div></div></div>
     </div>
     
