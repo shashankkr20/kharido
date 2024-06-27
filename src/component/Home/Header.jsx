@@ -39,6 +39,7 @@ const Header = () => {
   }
   useEffect(()=>{
      setCartct(0);
+     if(curruser)
       (curruser.cart).map((ele)=>{
         setCartct(ct=>ct+(ele.quant))
       })
@@ -47,7 +48,7 @@ const Header = () => {
 
     <>
     <div className='header' onMouseEnter={handleMouseOut}>
-        <div className="company-logo" onClick={()=>curruser._id!==""?navigate('/home'):alert("login first")}><img src="./images/logo.png" alt="company" /></div>
+        <div className="company-logo" onClick={()=>navigate('/home')}><img src="./images/logo.png" alt="company" /></div>
         <div className="coll-types"><div onClick={handleItemsearch}>Clothes</div><div onClick={handleItemsearch}>Electronics</div><div onClick={handleItemsearch}>Beauty</div><div onClick={handleItemsearch}>Medicine</div></div>
         <div className="search" ><SearchIcon   className='sicon'/><input type="text" /></div>
         <div className="other"><div className="acc_icon" onMouseEnter={handleMouseOver} ><AccountCircleIcon 
@@ -60,8 +61,8 @@ const Header = () => {
           <span className='otdet'>Saved Cards</span>
           
         </div>
-        <button style={{cursor:'pointer'}} onClick={logOut}>{(curruser._id==="")? "Login":"Logout"}</button>
-       </div> }</div><div className="acc_icon"><FavoriteBorderIcon onClick={()=>(curruser._id==="")?alert("You need to Login to see your Wishlist"):navigate('/wishlist')}/><label className='labeling'>Favourite</label></div><div className="acc_icon carti"><ShoppingCartIcon onClick={()=>(curruser._id==="")?alert("You need to Login to browse your cart"):navigate('/cart')}/><label className='labeling'>Cart</label><div className="card_ct"><label>{cartcnt}</label></div></div></div>
+        <button style={{cursor:'pointer'}} onClick={logOut}>{(curruser._id==="" || curruser._id===undefined)? "Login":"Logout"}</button>
+       </div> }</div><div className="acc_icon"><FavoriteBorderIcon onClick={()=>(curruser._id==="" || curruser._id===undefined)?alert("You need to Login to see your Wishlist"):navigate('/wishlist')}/><label className='labeling'>Favourite</label></div><div className="acc_icon carti"><ShoppingCartIcon onClick={()=>(curruser._id==="" || curruser._id===undefined)?alert("You need to Login to browse your cart"):navigate('/cart')}/><label className='labeling'>Cart</label><div className="card_ct"><label>{cartcnt}</label></div></div></div>
     </div>
     
    </>
