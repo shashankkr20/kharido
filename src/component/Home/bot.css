@@ -16,6 +16,12 @@
     width: 80%;
     height: 80%;
 }
+.chatbot{
+transition: transform 0.2s ease-in-out;
+  }
+  .chatbot:hover{
+    transform:scale(1.20);
+}
 .chat{
     /* top: 50px; */
     bottom: 150px;
