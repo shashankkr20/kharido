@@ -34,8 +34,12 @@
     width:250px ;
     display: flex;
     flex-direction: column;
+    transition:transform 0.2s ease-in-out;
     /* background-color: #ffff; */
     /* border: 1px solid grey; */
+}
+.item:hover{
+    transform:scale(1.05);
 }
 .item>.itemimage{
     /* display: flex;
